@@ -1,4 +1,4 @@
--- Will be used later for getting flattened globals
+-- Help
 local ImportGlobals
 
 -- Holds the actual DOM data
@@ -459,16 +459,16 @@ local ClosureBindings = {
         NotificationModule:Init(GUI)
 
         local Library = {
-            Version = "1.1.0",
+            Version = "1.2.0",
             OpenFrames = {},
             Options = {},
             Themes = require(Root.Themes).Names,
             Window = nil,
             WindowFrame = nil,
             Unloaded = false,
-            Theme = "Dark",
+            Theme = "Midnight Sapphire",
             DialogOpen = false,
-            UseAcrylic = false,
+            UseAcrylic = true,
             Acrylic = false,
             Transparency = true,
             MinimizeKeybind = nil,
