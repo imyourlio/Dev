@@ -1,4 +1,4 @@
--- Reao
+-- Added
 local ImportGlobals
 
 -- Holds the actual DOM data
@@ -209,7 +209,29 @@ local ObjectTree = {
                         {
                             "Midnight Sapphire"
                         }
-                    }
+                    },
+                    {
+                        55,
+                        "ModuleScript", 
+                        {
+                            "Deep Ocean"
+                        }
+                    },
+                    {
+                        56,
+                        "ModuleScript", 
+                        {
+                            "Royal Purple"
+                        }
+                    },
+                    {
+                        57,
+                        "ModuleScript", 
+                        {
+                            "Emerald Night"
+                        }
+                    },
+                    
                 }
             },
             {
@@ -7120,7 +7142,10 @@ local ClosureBindings = {
                 "Aqua",
                 "Amethyst",
                 "Rose",
-                "Midnight Sapphire"
+                "Midnight Sapphire",
+                "Deep Ocean",
+                "Royal Purple",
+                "Emerald Night"
             }
         }
 
@@ -7396,6 +7421,126 @@ local ClosureBindings = {
             Text = Color3.fromRGB(220, 225, 235),
             SubText = Color3.fromRGB(160, 170, 190),
             Hover = Color3.fromRGB(55, 75, 120),
+            HoverChange = 0.05
+        }
+    end,
+    [55] = function()
+        local maui, script, require, getfenv, setfenv = ImportGlobals(55)
+        return {
+            Name = "Deep Ocean",
+            Accent = Color3.fromRGB(0, 145, 189),
+            AcrylicMain = Color3.fromRGB(10, 15, 25),
+            AcrylicBorder = Color3.fromRGB(30, 85, 125),
+            AcrylicGradient = ColorSequence.new(Color3.fromRGB(0, 95, 145), Color3.fromRGB(10, 45, 75)),
+            AcrylicNoise = 0.93,
+            TitleBarLine = Color3.fromRGB(40, 95, 135),
+            Tab = Color3.fromRGB(50, 120, 160),
+            Element = Color3.fromRGB(40, 110, 150),
+            ElementBorder = Color3.fromRGB(25, 60, 90),
+            InElementBorder = Color3.fromRGB(35, 75, 105),
+            ElementTransparency = 0.88,
+            ToggleSlider = Color3.fromRGB(45, 115, 155),
+            ToggleToggled = Color3.fromRGB(10, 15, 25),
+            SliderRail = Color3.fromRGB(45, 115, 155),
+            DropdownFrame = Color3.fromRGB(55, 125, 165),
+            DropdownHolder = Color3.fromRGB(20, 45, 70),
+            DropdownBorder = Color3.fromRGB(25, 55, 85),
+            DropdownOption = Color3.fromRGB(40, 110, 150),
+            Keybind = Color3.fromRGB(40, 110, 150),
+            Input = Color3.fromRGB(40, 110, 150),
+            InputFocused = Color3.fromRGB(15, 25, 40),
+            InputIndicator = Color3.fromRGB(60, 130, 170),
+            Dialog = Color3.fromRGB(20, 45, 70),
+            DialogHolder = Color3.fromRGB(15, 35, 55),
+            DialogHolderLine = Color3.fromRGB(10, 30, 50),
+            DialogButton = Color3.fromRGB(20, 45, 70),
+            DialogButtonBorder = Color3.fromRGB(35, 80, 110),
+            DialogBorder = Color3.fromRGB(30, 75, 105),
+            DialogInput = Color3.fromRGB(25, 50, 75),
+            DialogInputLine = Color3.fromRGB(65, 135, 175),
+            Text = Color3.fromRGB(225, 235, 245),
+            SubText = Color3.fromRGB(165, 185, 205),
+            Hover = Color3.fromRGB(40, 110, 150),
+            HoverChange = 0.05
+        }
+    end,
+    [56] = function()
+        local maui, script, require, getfenv, setfenv = ImportGlobals(56)
+        return {
+            Name = "Royal Purple",
+            Accent = Color3.fromRGB(147, 45, 255),
+            AcrylicMain = Color3.fromRGB(18, 12, 25),
+            AcrylicBorder = Color3.fromRGB(95, 55, 145),
+            AcrylicGradient = ColorSequence.new(Color3.fromRGB(105, 45, 185), Color3.fromRGB(45, 25, 85)),
+            AcrylicNoise = 0.92,
+            TitleBarLine = Color3.fromRGB(105, 65, 155),
+            Tab = Color3.fromRGB(125, 80, 180),
+            Element = Color3.fromRGB(115, 70, 170),
+            ElementBorder = Color3.fromRGB(65, 40, 95),
+            InElementBorder = Color3.fromRGB(80, 50, 115),
+            ElementTransparency = 0.87,
+            ToggleSlider = Color3.fromRGB(120, 75, 175),
+            ToggleToggled = Color3.fromRGB(18, 12, 25),
+            SliderRail = Color3.fromRGB(120, 75, 175),
+            DropdownFrame = Color3.fromRGB(135, 85, 185),
+            DropdownHolder = Color3.fromRGB(45, 30, 70),
+            DropdownBorder = Color3.fromRGB(55, 35, 85),
+            DropdownOption = Color3.fromRGB(115, 70, 170),
+            Keybind = Color3.fromRGB(115, 70, 170),
+            Input = Color3.fromRGB(115, 70, 170),
+            InputFocused = Color3.fromRGB(25, 15, 40),
+            InputIndicator = Color3.fromRGB(140, 90, 190),
+            Dialog = Color3.fromRGB(45, 30, 70),
+            DialogHolder = Color3.fromRGB(35, 20, 55),
+            DialogHolderLine = Color3.fromRGB(30, 15, 50),
+            DialogButton = Color3.fromRGB(45, 30, 70),
+            DialogButtonBorder = Color3.fromRGB(85, 55, 115),
+            DialogBorder = Color3.fromRGB(75, 50, 110),
+            DialogInput = Color3.fromRGB(50, 35, 75),
+            DialogInputLine = Color3.fromRGB(145, 95, 195),
+            Text = Color3.fromRGB(235, 225, 245),
+            SubText = Color3.fromRGB(185, 165, 205),
+            Hover = Color3.fromRGB(115, 70, 170),
+            HoverChange = 0.06
+        }
+    end,
+    [57] = function()
+        local maui, script, require, getfenv, setfenv = ImportGlobals(57)
+        return {
+            Name = "Emerald Night",
+            Accent = Color3.fromRGB(45, 185, 115),
+            AcrylicMain = Color3.fromRGB(12, 20, 15),
+            AcrylicBorder = Color3.fromRGB(55, 115, 85),
+            AcrylicGradient = ColorSequence.new(Color3.fromRGB(45, 145, 95), Color3.fromRGB(25, 65, 45)),
+            AcrylicNoise = 0.91,
+            TitleBarLine = Color3.fromRGB(65, 125, 95),
+            Tab = Color3.fromRGB(80, 145, 110),
+            Element = Color3.fromRGB(70, 135, 100),
+            ElementBorder = Color3.fromRGB(40, 75, 55),
+            InElementBorder = Color3.fromRGB(50, 95, 70),
+            ElementTransparency = 0.86,
+            ToggleSlider = Color3.fromRGB(75, 140, 105),
+            ToggleToggled = Color3.fromRGB(12, 20, 15),
+            SliderRail = Color3.fromRGB(75, 140, 105),
+            DropdownFrame = Color3.fromRGB(85, 150, 115),
+            DropdownHolder = Color3.fromRGB(30, 55, 40),
+            DropdownBorder = Color3.fromRGB(35, 65, 45),
+            DropdownOption = Color3.fromRGB(70, 135, 100),
+            Keybind = Color3.fromRGB(70, 135, 100),
+            Input = Color3.fromRGB(70, 135, 100),
+            InputFocused = Color3.fromRGB(15, 30, 20),
+            InputIndicator = Color3.fromRGB(90, 155, 120),
+            Dialog = Color3.fromRGB(30, 55, 40),
+            DialogHolder = Color3.fromRGB(20, 40, 30),
+            DialogHolderLine = Color3.fromRGB(15, 35, 25),
+            DialogButton = Color3.fromRGB(30, 55, 40),
+            DialogButtonBorder = Color3.fromRGB(55, 95, 75),
+            DialogBorder = Color3.fromRGB(50, 90, 70),
+            DialogInput = Color3.fromRGB(35, 60, 45),
+            DialogInputLine = Color3.fromRGB(95, 160, 125),
+            Text = Color3.fromRGB(225, 245, 235),
+            SubText = Color3.fromRGB(165, 205, 185),
+            Hover = Color3.fromRGB(70, 135, 100),
             HoverChange = 0.05
         }
     end
