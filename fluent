@@ -1,4 +1,6 @@
 --[[
+
+UPDATEDD
     Fluent Interface Suite
     This script is not intended to be modified.
     To view the source code, see the 'src' folder on GitHub!
@@ -3337,19 +3339,24 @@ local aa = {
         function aj.New(c, d)
             assert(d.Title, "Paragraph - Missing Title")
             d.Content = d.Content or ""
+    
+            -- Create the paragraph UI element
             local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
             e.Frame.BackgroundTransparency = 0.92
             e.Border.Transparency = 0.6
-            return setmetatable({ Element = e }, aj)
+    
+            -- Store the Element and Content in the paragraph object
+            return setmetatable({ Element = e, Content = d.Content }, aj)
         end
     
-        -- Add SetValue function to update the paragraph content
+        -- Add SetValue function to update paragraph content dynamically
         function aj:SetValue(newValue)
             assert(newValue, "SetValue requires a newValue argument")
-            if self.Element then
-                self.Element.Text = newValue -- Directly update the text or equivalent property
+            self.Content = newValue -- Update the stored content
+            if self.Element and self.Element.Content then
+                self.Element.Content.Text = newValue -- Update the UI element's text
             else
-                error("SetValue - Element is nil")
+                error("SetValue - Unable to update text: Element or Content missing")
             end
         end
     
