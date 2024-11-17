@@ -1,4 +1,4 @@
--- Updated
+-- Reao
 local ImportGlobals
 
 -- Holds the actual DOM data
@@ -7119,7 +7119,8 @@ local ClosureBindings = {
                 "Light",
                 "Aqua",
                 "Amethyst",
-                "Rose"
+                "Rose",
+                "Midnight Sapphire"
             }
         }
 
