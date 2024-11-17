@@ -1,4 +1,4 @@
--- Will be used later for getting flattened globals
+-- Updated
 local ImportGlobals
 
 -- Holds the actual DOM data
@@ -198,9 +198,16 @@ local ObjectTree = {
                     },
                     {
                         53,
-                        "ModuleScript",
+                        "ModuleScript", 
                         {
                             "Rose"
+                        }
+                    },
+                    {
+                        54,
+                        "ModuleScript", 
+                        {
+                            "Midnight Sapphire"
                         }
                     }
                 }
@@ -7126,7 +7133,7 @@ local ClosureBindings = {
     [48] = function()
         local maui, script, require, getfenv, setfenv = ImportGlobals(48)
         return {
-            Name = "Amethyst",
+            Name = "",
             Accent = Color3.fromRGB(97, 62, 167),
             AcrylicMain = Color3.fromRGB(20, 20, 20),
             AcrylicBorder = Color3.fromRGB(110, 90, 130),
@@ -7349,6 +7356,46 @@ local ClosureBindings = {
             SubText = Color3.fromRGB(170, 170, 170),
             Hover = Color3.fromRGB(200, 120, 170),
             HoverChange = 0.04
+        }
+    end,
+    [54] = function()
+        local maui, script, require, getfenv, setfenv = ImportGlobals(54)
+        return {
+            Name = "Midnight Sapphire",
+            Accent = Color3.fromRGB(45, 82, 155),
+            AcrylicMain = Color3.fromRGB(15, 18, 25),
+            AcrylicBorder = Color3.fromRGB(55, 75, 115),
+            AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 65, 120), Color3.fromRGB(20, 30, 55)),
+            AcrylicNoise = 0.94,
+            TitleBarLine = Color3.fromRGB(60, 80, 120),
+            Tab = Color3.fromRGB(70, 95, 140),
+            Element = Color3.fromRGB(55, 75, 120),
+            ElementBorder = Color3.fromRGB(35, 45, 70),
+            InElementBorder = Color3.fromRGB(50, 65, 95),
+            ElementTransparency = 0.89,
+            ToggleSlider = Color3.fromRGB(60, 85, 135),
+            ToggleToggled = Color3.fromRGB(15, 18, 25),
+            SliderRail = Color3.fromRGB(60, 85, 135),
+            DropdownFrame = Color3.fromRGB(75, 100, 150),
+            DropdownHolder = Color3.fromRGB(25, 35, 55),
+            DropdownBorder = Color3.fromRGB(30, 40, 65),
+            DropdownOption = Color3.fromRGB(55, 75, 120),
+            Keybind = Color3.fromRGB(55, 75, 120),
+            Input = Color3.fromRGB(55, 75, 120),
+            InputFocused = Color3.fromRGB(15, 20, 35),
+            InputIndicator = Color3.fromRGB(80, 105, 155),
+            Dialog = Color3.fromRGB(25, 35, 55),
+            DialogHolder = Color3.fromRGB(20, 25, 40),
+            DialogHolderLine = Color3.fromRGB(15, 20, 35),
+            DialogButton = Color3.fromRGB(25, 35, 55),
+            DialogButtonBorder = Color3.fromRGB(45, 60, 90),
+            DialogBorder = Color3.fromRGB(40, 55, 85),
+            DialogInput = Color3.fromRGB(30, 40, 65),
+            DialogInputLine = Color3.fromRGB(85, 110, 160),
+            Text = Color3.fromRGB(220, 225, 235),
+            SubText = Color3.fromRGB(160, 170, 190),
+            Hover = Color3.fromRGB(55, 75, 120),
+            HoverChange = 0.05
         }
     end
 } -- [RefId] = Closure
