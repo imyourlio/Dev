@@ -1,4 +1,4 @@
--- ok
+-- real fix
 local ImportGlobals
 
 -- Holds the actual DOM data
@@ -3139,7 +3139,7 @@ local ClosureBindings = {
             if Themes[require(Root).Theme][Property] then
                 return Themes[require(Root).Theme][Property]
             end
-            return Themes["Dark"][Property]
+            return Themes["Midnight Sapphire"][Property]
         end
 
         function Creator.UpdateTheme()
