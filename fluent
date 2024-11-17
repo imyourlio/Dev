@@ -4900,34 +4900,22 @@ local ClosureBindings = {
         local Components = Root.Components
         local Flipper = require(Root.Packages.Flipper)
         local Creator = require(Root.Creator)
-    
+
         local Paragraph = {}
         Paragraph.__index = Paragraph
         Paragraph.__type = "Paragraph"
-    
-        -- Constructor for Paragraph
+
         function Paragraph:New(Config)
             assert(Config.Title, "Paragraph - Missing Title")
             Config.Content = Config.Content or ""
-    
-            -- Assuming Components.Element is a valid function that returns a Paragraph instance
-            local ParagraphInstance = require(Components.Element)(Config.Title, Config.Content, Paragraph.Container, false)
-            
-            -- Set specific properties
-            ParagraphInstance.Frame.BackgroundTransparency = 0.92
-            ParagraphInstance.Border.Transparency = 0.6
-    
-            -- Add SetValue method to update content dynamically
-            function ParagraphInstance:SetValue(newText)
-                -- Update the content of the Paragraph
-                self.Content = newText
-                -- Assuming there's a method or property to update the displayed text
-                self.TextLabel.Text = newText  -- Replace `TextLabel` with the actual name of the text component
-            end
-    
-            return ParagraphInstance
+
+            local Paragraph = require(Components.Element)(Config.Title, Config.Content, Paragraph.Container, false)
+            Paragraph.Frame.BackgroundTransparency = 0.92
+            Paragraph.Border.Transparency = 0.6
+
+            return Paragraph
         end
-    
+
         return Paragraph
     end,
     [26] = function()
