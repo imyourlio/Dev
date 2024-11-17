@@ -1,4 +1,4 @@
--- Hello
+-- Will be used later for getting flattened globals
 local ImportGlobals
 
 -- Holds the actual DOM data
@@ -468,8 +468,8 @@ local ClosureBindings = {
             Unloaded = false,
             Theme = "Dark",
             DialogOpen = false,
-            UseAcrylic = true,
-            Acrylic = true,
+            UseAcrylic = false,
+            Acrylic = false,
             Transparency = true,
             MinimizeKeybind = nil,
             MinimizeKey = Enum.KeyCode.LeftControl,
