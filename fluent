@@ -1,7 +1,5 @@
--- real fix
+-- Open Source for skid
 local ImportGlobals
-
--- Holds the actual DOM data
 local ObjectTree = {
     {
         1,
@@ -468,7 +466,7 @@ local ClosureBindings = {
             Unloaded = false,
             Theme = "Midnight Sapphire",
             DialogOpen = false,
-            UseAcrylic = true,
+            UseAcrylic = false,
             Acrylic = false,
             Transparency = true,
             MinimizeKeybind = nil,
