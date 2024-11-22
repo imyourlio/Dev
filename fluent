@@ -466,7 +466,6 @@ local ClosureBindings = {
             Unloaded = false,
             Theme = "Midnight Sapphire",
             DialogOpen = false,
-            UseAcrylic = false,
             Acrylic = false,
             Transparency = true,
             MinimizeKeybind = nil,
@@ -568,11 +567,6 @@ local ClosureBindings = {
 
             Library.MinimizeKey = Config.MinimizeKey
 
-            Library.UseAcrylic = Config.Acrylic
-            if Library.UseAcrylic then
-                Acrylic.init()
-            end
-
             Library.Window = Window
             Library:SetTheme(Config.Theme)
 
@@ -589,25 +583,8 @@ local ClosureBindings = {
         function Library:Destroy()
             if Library.Window then
                 Library.Unloaded = true
-                if Library.UseAcrylic then
-                    Library.Window.AcrylicPaint.Model:Destroy()
-                end
                 Creator.Disconnect()
                 Library.GUI:Destroy()
-            end
-        end
-
-        function Library:ToggleAcrylic(Value)
-            if Library.Window then
-                if Library.UseAcrylic then
-                    Library.Acrylic = Value
-                    Library.Window.AcrylicPaint.Model.Transparency = Value and 0.98 or 1
-                    if Value then
-                        Acrylic.Enable()
-                    else
-                        Acrylic.Disable()
-                    end
-                end
             end
         end
 
@@ -971,14 +948,6 @@ local ClosureBindings = {
             )
 
             local Blur
-
-            if require(script.Parent.Parent).UseAcrylic then
-                Blur = AcrylicBlur()
-                Blur.Frame.Parent = AcrylicPaint.Frame
-                AcrylicPaint.Model = Blur.Model
-                AcrylicPaint.AddParent = Blur.AddParent
-                AcrylicPaint.SetVisibility = Blur.SetVisibility
-            end
 
             return AcrylicPaint
         end
@@ -1826,9 +1795,6 @@ local ClosureBindings = {
                                 }
                             )
                             task.wait(0.4)
-                            if require(Root).UseAcrylic then
-                                NewNotification.AcrylicPaint.Model:Destroy()
-                            end
                             NewNotification.Holder:Destroy()
                         end
                     )
@@ -2721,10 +2687,6 @@ local ClosureBindings = {
                 }
             )
 
-            if Library.UseAcrylic then
-                Window.AcrylicPaint.AddParent(Window.Root)
-            end
-
             local SizeMotor =
                 Flipper.GroupMotor.new(
                 {
@@ -2969,9 +2931,6 @@ local ClosureBindings = {
             end
 
             function Window:Destroy()
-                if Library.UseAcrylic then
-                    Window.AcrylicPaint.Model:Destroy()
-                end
                 Window.Root:Destroy()
             end
 
