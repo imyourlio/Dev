@@ -1,4 +1,4 @@
--- Open Source for skid
+-- MERCURY HUB ON TOP
 local ImportGlobals
 local ObjectTree = {
     {
@@ -4228,16 +4228,19 @@ local ClosureBindings = {
             end
             local chache = {}
             function Dropdown:Clear()
+
                 for _, Element in next, DropdownScrollFrame:GetChildren() do
                     if not Element:IsA("UIListLayout") then
                         Element:Destroy()
                     end
                 end
+
                 DropdownDisplay.Text = ""
                 chache = {}
                 Dropdown:Close()
                 RecalculateCanvasSize()
                 RecalculateListSize()
+                
             end
 
             function Dropdown:BuildDropdownList()
@@ -4450,19 +4453,13 @@ local ClosureBindings = {
                 if args then
                     table.insert(chache, args)
                     Dropdown.Values = chache
-                    DropdownDisplay.Text = ""
-                    
-                    Dropdown:Close()
-                    RecalculateCanvasSize()
-                    RecalculateListSize()
                 end
-
+                Dropdown:Close()
                 Dropdown:BuildDropdownList()
-                Dropdown:BuildDropdownList()
-                DropdownDisplay.Text = ""
-
                 RecalculateCanvasSize()
                 RecalculateListSize()
+                DropdownDisplay.Text = ""
+
             end
 
             function Dropdown:OnChanged(Func)
