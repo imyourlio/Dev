@@ -1,4 +1,4 @@
--- NIGGERS
+-- HAM DAM 
 -- Open Source for skid
 local ImportGlobals
 local ObjectTree = {
@@ -4436,13 +4436,8 @@ local ClosureBindings = {
             end
 
             function Dropdown:Clear()
-                for _, Element in next, DropdownScrollFrame:GetChildren() do
-                    if not Element:IsA("UIListLayout") then
-                        Element:Destroy()
-                    end
-                end
-                DropdownDisplay.Text = ""
                 chache = {}
+                DropdownDisplay.Text = ""
                 Dropdown:Close()
                 Dropdown:BuildDropdownList()
             end
@@ -4450,7 +4445,6 @@ local ClosureBindings = {
             function Dropdown:Add(args)
                 if args then
                     table.insert(chache, args)
-                    Dropdown.Values = chache
                     Dropdown:BuildDropdownList()
                     DropdownDisplay.Text = ""
                 end
