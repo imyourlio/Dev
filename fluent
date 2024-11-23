@@ -1,4 +1,4 @@
--- NIGHGER
+-- HELP BRO 
 -- Open Source for skid
 local ImportGlobals
 local ObjectTree = {
@@ -4235,7 +4235,7 @@ local ClosureBindings = {
                 for _, Element in next, DropdownScrollFrame:GetChildren() do
                     if not Element:IsA("UIListLayout") then
                         Element.Visible = false  
-                        table.insert(elementPool, Element)  
+                        table.insert(chache, Element)  
                     end
                 end
             
