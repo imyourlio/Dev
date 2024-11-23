@@ -1,4 +1,3 @@
--- Niggers 
 -- Open Source for skid
 local ImportGlobals
 local ObjectTree = {
@@ -468,7 +467,7 @@ local ClosureBindings = {
             Theme = "Midnight Sapphire",
             DialogOpen = false,
             Acrylic = false,
-            Transparency = true,
+            Transparency = false,
             MinimizeKeybind = nil,
             MinimizeKey = Enum.KeyCode.LeftControl,
             GUI = GUI
@@ -4452,6 +4451,10 @@ local ClosureBindings = {
                     table.insert(chache, args)
                     Dropdown.Values = chache
                     DropdownDisplay.Text = ""
+                    
+                    Dropdown:Close()
+                    RecalculateCanvasSize()
+                    RecalculateListSize()
                 end
 
                 Dropdown:BuildDropdownList()
