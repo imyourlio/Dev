@@ -1,4 +1,4 @@
--- HELP BRO 
+-- NIGGERS
 -- Open Source for skid
 local ImportGlobals
 local ObjectTree = {
@@ -4229,42 +4229,6 @@ local ClosureBindings = {
             end
             local chache = {}
 
-            function Dropdown:Clear()
-                Dropdown:Close()
-            
-                for _, Element in next, DropdownScrollFrame:GetChildren() do
-                    if not Element:IsA("UIListLayout") then
-                        Element.Visible = false  
-                        table.insert(chache, Element)  
-                    end
-                end
-            
-                DropdownDisplay.Text = ""
-                chache = {}
-            
-                task.defer(function()
-                    RecalculateCanvasSize()
-                    RecalculateListSize()
-                end)
-            end
-            
-            function Dropdown:Add(args)
-                if args then
-                    table.insert(chache, args)
-                    Dropdown.Values = chache
-                end
-            
-                Dropdown:Close()
-            
-                task.defer(function()
-                    Dropdown:BuildDropdownList()
-                    RecalculateCanvasSize()
-                    RecalculateListSize()
-                end)
-            
-                DropdownDisplay.Text = ""
-            end
-
             function Dropdown:BuildDropdownList()
                 local Values = Dropdown.Values
                 local Buttons = {}
@@ -4469,6 +4433,27 @@ local ClosureBindings = {
                 end
 
                 Dropdown:BuildDropdownList()
+            end
+
+            function Dropdown:Clear()
+                for _, Element in next, DropdownScrollFrame:GetChildren() do
+                    if not Element:IsA("UIListLayout") then
+                        Element:Destroy()
+                    end
+                end
+                DropdownDisplay.Text = ""
+                chache = {}
+                Dropdown:Close()
+                Dropdown:BuildDropdownList()
+            end
+
+            function Dropdown:Add(args)
+                if args then
+                    table.insert(chache, args)
+                    Dropdown.Values = chache
+                    Dropdown:BuildDropdownList()
+                    DropdownDisplay.Text = ""
+                end
             end
 
             function Dropdown:OnChanged(Func)
