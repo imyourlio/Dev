@@ -1,4 +1,3 @@
--- Hi // Open Source
 
 
 local ImportGlobals
@@ -592,11 +591,13 @@ local ClosureBindings = {
             local UICorner = Instance.new("UICorner")
             UICorner.Parent = ImageButton
         
-            local function sendKeyEvent()
-                Library.Window.Visible = not Library.Window.Visible 
+            local function Click()
+                if Library and Library.Window then 
+                    Library.Window.Visible = not Library.Window.Visible
+                end
             end
         
-            ImageButton.MouseButton1Down:Connect(sendKeyEvent)
+            ImageButton.MouseButton1Down:Connect(Click)
 
             return Window
         end
