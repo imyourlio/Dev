@@ -1,4 +1,5 @@
--- Open Sourceeee
+-- Open Source
+
 local ImportGlobals
 local ObjectTree = {
     {
@@ -572,11 +573,7 @@ local ClosureBindings = {
             UICorner.Parent = ImageButton
         
             local function sendKeyEvent()
-                local VirtualInputManager = game:GetService("VirtualInputManager")
-                if VirtualInputManager then
-                    VirtualInputManager:SendKeyEvent(true, Config.MinimizeKey or Enum.KeyCode.LeftControl, false, game)
-                    VirtualInputManager:SendKeyEvent(false, Config.MinimizeKey or Enum.KeyCode.LeftControl, false, game)
-                end
+                GUI.Enable = not GUI.Enable 
             end
         
             ImageButton.MouseButton1Down:Connect(sendKeyEvent)
