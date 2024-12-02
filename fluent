@@ -1,5 +1,5 @@
 
-
+-- Cool
 local ImportGlobals
 local ObjectTree = {
     {
@@ -549,11 +549,6 @@ local ClosureBindings = {
             Config.Acrylic = Config.Acrylic or true
             Config.Theme = Config.Theme or "Midnight Sapphire"
             Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
-
-            local UserInputService = game:GetService("UserInputService")
-        
-            Size = UDim2.new(0, 70, 0, 70)
-            Position = UDim2.new(0.15, 0, 0.2, 0)
         
             local ScreenGui = Instance.new("ScreenGui")
             ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -568,8 +563,8 @@ local ClosureBindings = {
             ImageButton.BackgroundTransparency = 1
             ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
             ImageButton.BorderSizePixel = 0
-            ImageButton.Position = Position
-            ImageButton.Size = Size
+            ImageButton.Position = UDim2.new(0.15, 0, 0.2, 0)
+            ImageButton.Size = UDim2.new(0, 70, 0, 70)
             ImageButton.Image = "rbxassetid://108694005969068"
         
             local UICorner = Instance.new("UICorner")
