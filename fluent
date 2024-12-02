@@ -1,4 +1,5 @@
--- Hello // Open Sourceeee
+
+
 local ImportGlobals
 local ObjectTree = {
     {
@@ -554,7 +555,7 @@ local ClosureBindings = {
             Size = UDim2.new(0, 70, 0, 70)
             Position = UDim2.new(0.15, 0, 0.2, 0)
         
-            local ScreenGui = Instance.new("ScreenGui")
+            local ScreenGui = Instance.new("Mercury Mobile")
             ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
             ScreenGui.Parent = game.CoreGui
         
@@ -572,7 +573,7 @@ local ClosureBindings = {
             UICorner.Parent = ImageButton
         
             local function sendKeyEvent()
-                GUI.enable = not GUI.enable 
+                Library.GUI.enable = not Library.GUI.enable 
             end
         
             ImageButton.MouseButton1Down:Connect(sendKeyEvent)
@@ -613,6 +614,7 @@ local ClosureBindings = {
                 Library.Unloaded = true
                 Creator.Disconnect()
                 Library.GUI:Destroy()
+                game.CoreGui:FindFirstChild("Mercury Mobile"):Destroy()
             end
         end
 
