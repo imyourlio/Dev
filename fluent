@@ -1,5 +1,4 @@
--- Open Source
-
+-- Hello // Open Sourceeee
 local ImportGlobals
 local ObjectTree = {
     {
@@ -573,7 +572,7 @@ local ClosureBindings = {
             UICorner.Parent = ImageButton
         
             local function sendKeyEvent()
-                GUI.Enable = not GUI.Enable 
+                GUI.enable = not GUI.enable 
             end
         
             ImageButton.MouseButton1Down:Connect(sendKeyEvent)
