@@ -1,4 +1,4 @@
--- hI
+-- HI
 local ImportGlobals
 local ObjectTree = {
     {
@@ -464,7 +464,7 @@ local ClosureBindings = {
             Window = nil,
             WindowFrame = nil,
             Unloaded = false,
-            Theme = "Midnight Sapphire",
+            Theme = "Darker",
             DialogOpen = false,
             Acrylic = false,
             Transparency = false,
@@ -546,7 +546,7 @@ local ClosureBindings = {
             Config.TabWidth = Config.TabWidth or 170
             Config.Size = Config.Size or UDim2.fromOffset(590, 470)
             Config.Acrylic = Config.Acrylic or true
-            Config.Theme = Config.Theme or "Midnight Sapphire"
+            Config.Theme = Config.Theme or "Darker"
             Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
 
             if Library.Window then
@@ -3097,7 +3097,7 @@ local ClosureBindings = {
             if Themes[require(Root).Theme][Property] then
                 return Themes[require(Root).Theme][Property]
             end
-            return Themes["Midnight Sapphire"][Property]
+            return Themes["Darker"][Property]
         end
 
         function Creator.UpdateTheme()
