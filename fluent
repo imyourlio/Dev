@@ -1,4 +1,4 @@
--- HI
+-- HELP 
 local ImportGlobals
 local ObjectTree = {
     {
@@ -546,7 +546,7 @@ local ClosureBindings = {
             Config.TabWidth = Config.TabWidth or 170
             Config.Size = Config.Size or UDim2.fromOffset(590, 470)
             Config.Acrylic = Config.Acrylic or true
-            Config.Theme = Config.Theme or "Darker"
+            Config.Theme = Config.Theme or "Midnight Sapphire"
             Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
 
             if Library.Window then
