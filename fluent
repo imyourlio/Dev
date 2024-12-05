@@ -1,4 +1,4 @@
--- HELP 
+-- HI
 local ImportGlobals
 local ObjectTree = {
     {
@@ -7258,7 +7258,10 @@ local ClosureBindings = {
             DialogButtonBorder = Color3.fromRGB(55, 55, 55),
             DialogBorder = Color3.fromRGB(50, 50, 50),
             DialogInput = Color3.fromRGB(45, 45, 45),
-            DialogInputLine = Color3.fromRGB(120, 120, 120)
+            DialogInputLine = Color3.fromRGB(120, 120, 120),
+            SubText = Color3.fromRGB(170, 170, 170),
+            Hover = Color3.fromRGB(120, 120, 120),
+            HoverChange = 0.07
         }
     end,
     [52] = function()
